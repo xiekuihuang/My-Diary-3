@@ -1,0 +1,559 @@
+:root {
+    --primary-color: #0056b3; /* Biru tua */
+    --secondary-color: #ff3e3e; /* Merah terang */
+    --background-color: #000; /* Hitam */
+    --text-color: #e6f2ff; /* Biru muda */
+    --accent-color: #ff6b6b; /* Merah muda */
+    --white: #ffffff;
+    --font-primary: 'Roboto', sans-serif; /* Font utama */
+    --font-secondary: 'Montserrat', sans-serif; /* Font sekunder */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    background-image: 
+        linear-gradient(rgba(0, 86, 179, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 86, 179, 0.1) 1px, transparent 1px),
+        linear-gradient(rgba(255, 62, 62, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 62, 62, 0.1) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+    background-attachment: fixed;
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+    100% {
+        background-position: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    }
+}
+
+body {
+    animation: backgroundMove 20s linear infinite;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Glass effect */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header dan Navigasi */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-family: var(--font-secondary);
+}
+
+nav ul li a i {
+    margin-right: 0.5rem;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255,255,255,0.3);
+    transform: translateY(-3px);
+}
+
+/* Sections */
+section {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(0, 86, 179, 0.8), 0 0 20px rgba(0, 86, 179, 0.8), 0 0 30px rgba(0, 86, 179, 0.8);
+    font-family: var(--font-secondary);
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+h2 i {
+    margin-right: 0.5rem;
+    color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, rgba(0, 86, 179, 0.8), rgba(255, 62, 62, 0.8)), url('https://source.unsplash.com/random/1920x1080?abstract');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--white);
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.parallax-effect {
+    background-image: url('https://source.unsplash.com/random/1920x1080?abstract');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px rgba(255, 62, 62, 0.5);
+    font-family: var(--font-secondary);
+}
+
+.cta-button:hover {
+    background-color: #ff5555;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255,62,62,0.4);
+}
+
+/* Profil */
+.profile-img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 2rem;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05) rotate(5deg);
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 62, 62, 0.5);
+    font-family: var(--font-secondary);
+}
+
+.skill-tag:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Timeline */
+.timeline {
+    list-style-type: none;
+    position: relative;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(var(--primary-color), var(--secondary-color));
+    left: 0;
+    margin-left: 10px;
+}
+
+.timeline li {
+    margin-bottom: 2rem;
+    padding-left: 3rem;
+    position: relative;
+}
+
+.timeline li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+}
+
+.timeline .year {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    border-radius: 25px;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-secondary);
+}
+
+/* Diary */
+#diary {
+    background: #1a1a1a; /* Ubah menjadi hitam terang */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    position: relative;
+}
+
+#diary::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(255,255,255,0.1);
+}
+
+.diary-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.diary-entry {
+    background: #2a2a2a; /* Ubah menjadi sedikit lebih terang dari latar belakang */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.diary-entry::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    background: #2a2a2a;
+    border-radius: 50%;
+    border: 2px solid #444;
+}
+
+.diary-entry:nth-child(even) {
+    align-self: flex-end;
+}
+
+.diary-entry:nth-child(even)::before {
+    left: auto;
+    right: -10px;
+}
+
+.diary-entry:hover {
+    transform: translateY(-5px);
+}
+
+.diary-header h3 {
+    color: #fff; /* Ubah menjadi putih */
+    font-size: 1.2rem;
+    font-family: var(--font-secondary);
+    margin-bottom: 10px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+.diary-entry p {
+    color: #ccc; /* Ubah menjadi abu-abu terang */
+    font-family: var(--font-primary);
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ff6b6b; /* Ubah menjadi merah muda */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-family: var(--font-secondary);
+}
+
+.read-more:hover {
+    color: #ff8c8c; /* Warna hover yang lebih terang */
+}
+
+/* Kontak */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 62, 62, 0.5);
+}
+
+.social-icon:hover {
+    transform: translateY(-3px) rotate(15deg);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Efek hover khusus untuk setiap platform media sosial */
+.social-icon[href*="facebook"]:hover {
+    background: #1877f2;
+}
+
+.social-icon[href*="tiktok"]:hover {
+    background: #000000;
+}
+
+.social-icon[href*="instagram"]:hover {
+    background: #c13584;
+}
+
+.social-icon[href*="wa.me"]:hover {
+    background: #25d366;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    text-align: center;
+    padding: 1rem;
+    color: var(--white);
+    font-family: var(--font-secondary);
+}
+
+/* Animasi */
+.animate-text, .animate-pop, .animate-slide-right, .animate-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.animate-text.animate, .animate-pop.animate, .animate-slide-right.animate, .animate-fade-in.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-pop {
+    transform: scale(0.8);
+}
+
+.animate-pop.animate {
+    transform: scale(1);
+}
+
+.animate-slide-right {
+    transform: translateX(-20px);
+}
+
+.animate-slide-right.animate {
+    transform: translateX(0);
+}
+
+.animate-fade-in {
+    opacity: 0;
+}
+
+.animate-fade-in.animate {
+    opacity: 1;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .timeline:before {
+        left: 20px;
+    }
+
+    .timeline li {
+        padding-left: 2rem;
+    }
+
+    .timeline li:before {
+        left: 10px;
+    }
+}
+
+/* Tambahkan ini di bagian styles.css */
+
+/* Gaya untuk header diary */
+.diary-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.diary-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.diary-header h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: var(--font-secondary);
+}
+
+/* Gaya untuk submenu */
+.has-submenu {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.submenu li {
+    margin: 0;
+}
+
+.submenu li a {
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    display: block;
+    white-space: nowrap;
+    font-family: var(--font-secondary);
+}
+
+.submenu li a:hover {
+    background-color: rgba(0, 86, 179, 0.1);
+}
+
+.has-submenu:hover .submenu {
+    display: block;
+}
